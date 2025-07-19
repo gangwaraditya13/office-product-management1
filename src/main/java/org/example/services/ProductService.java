@@ -1,19 +1,24 @@
 package org.example.services;
 
+import ProductDatabase.ProductDB;
 import org.example.officeEntity.Product;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class ProductService {
 
-    List<Product> products = new ArrayList<>();
+//    List<Product> products = new ArrayList<>();
+
+    ProductDB db = new ProductDB();
 
     public void addProduct(Product p){
-        products.add(p);
+//        products.add(p);
+        db.addProduct(p);
+
     }
 
-    public List<Product> veiwAll(){
+/*    public List<Product> veiwAll(){
         return products;
     }
 
@@ -47,5 +52,22 @@ public class ProductService {
             }
         }
         return searchName;
+    }*/
+
+    public void veiwAll(){
+        db.showProduct();
+    }
+
+
+    public void SearchByPlace(String place){
+        db.SBP(place);
+    }
+
+    public void searchProductOutOfWarranty(int year) {
+        db.SPOW(year);
+    }
+
+    public void searchByName(String text) {
+        db.SBN(text);
     }
 }

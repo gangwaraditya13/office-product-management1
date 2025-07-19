@@ -1,15 +1,15 @@
 package org.example;
 
-import org.example.officeEntity.Product;
 import org.example.services.ProductService;
 
-import java.util.List;
+//import org.example.officeEntity.Product;
+//import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         ProductService service = new ProductService();
 
-        service.addProduct(new Product("Type C", "Cable", "Black Drawer", 2024));
+/*        service.addProduct(new Product("Type C", "Cable", "Black Drawer", 2024));
         service.addProduct(new Product("Mac Studio", "Computer", "White Table", 2025));
         service.addProduct(new Product("Focusrite Mixer", "Audio System", "White Table", 2025));
         service.addProduct(new Product("Asus Vivobook", "Laptop", "Brown Drawer", 2021));
@@ -23,9 +23,16 @@ public class Main {
         service.addProduct(new Product("Logi Mouse", "Mouse", "Black Table", 2022));
         service.addProduct(new Product("Apple Mouse", "Mouse", "White Table", 2022));
         service.addProduct(new Product("Lenovo Mouse", "Mouse", "Black Drawer", 2022));
-        service.addProduct(new Product("BlackBeast", "Computer", "White Table", 2022));
+        service.addProduct(new Product("BlackBeast", "Computer", "White Table", 2022));*/
 
-        List<Product> products = service.veiwAll();
+        service.veiwAll();
+        System.out.println("\n++++++================================+++++++++\nSearch by the place\n");
+        service.SearchByPlace("black drawer");
+        System.out.println("\n++++++================================+++++++++\nSearch for out of warranty\n");
+        service.searchProductOutOfWarranty(2023);
+        System.out.println("\n++++++================================+++++++++\nSearch By text\n");
+        service.searchByName("Black");
+        /*List<Product> products = service.veiwAll();
         for(Product o : products)
             System.out.println(o.toString());
 
@@ -44,6 +51,6 @@ public class Main {
         System.out.println("\n++++++================================+++++++++\nSearch By name\n");
         List<Product> searchByName = service.searchByName("Black");
         for(Product o : searchByName)
-            System.out.println(o.toString());
+            System.out.println(o.toString());*/
     }
 }
