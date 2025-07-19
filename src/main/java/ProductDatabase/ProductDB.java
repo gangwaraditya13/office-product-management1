@@ -10,7 +10,7 @@ public class ProductDB {
     public void addProduct(Product p){
         String url = "jdbc:mysql://localhost:3306/aliens";
         String username = "root";
-        String password ="Gangwar@123";
+        String password ="0";
         try {
             com = DriverManager.getConnection(url, username, password);
             String createQuery = "create table if not exists OProduct(SNo int not null auto_increment primary key,productName varchar(200), type varchar(200), place varchar(200), warranty integer)";
@@ -34,7 +34,7 @@ public class ProductDB {
     public void showProduct(){
         String url = "jdbc:mysql://localhost:3306/aliens";
         String username = "root";
-        String password ="Gangwar@123";
+        String password ="0";
 
         try {
             com = DriverManager.getConnection(url,username,password);
@@ -52,7 +52,7 @@ public class ProductDB {
     public void SBP(String place) {
         String url = "jdbc:mysql://localhost:3306/aliens";
         String username = "root";
-        String password ="Gangwar@123";
+        String password ="0";
 
         try {
             com = DriverManager.getConnection(url,username,password);
@@ -72,7 +72,7 @@ public class ProductDB {
     public void SPOW(int year) {
         String url = "jdbc:mysql://localhost:3306/aliens";
         String username = "root";
-        String password ="Gangwar@123";
+        String password ="0";
 
         try {
             com = DriverManager.getConnection(url,username,password);
@@ -93,7 +93,7 @@ public class ProductDB {
     public void SBN(String text) {
         String url = "jdbc:mysql://localhost:3306/aliens";
         String username = "root";
-        String password ="Gangwar@123";
+        String password ="0";
 
         try {
             com = DriverManager.getConnection(url,username,password);
